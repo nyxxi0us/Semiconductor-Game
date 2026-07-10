@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://ckd2pjsrx6jcl"]
+
+[ext_resource type="Script" uid="uid://c0s4g460qefd4" path="res://game.gd" id="1_uwrxv"]
+
+[node name="Game" type="Node2D" unique_id=1797306078]
+script = ExtResource("1_uwrxv")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=396726766]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=552225032]
+layout_mode = 2
+
+[node name="Grid" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=681295719]
+layout_mode = 2
+
+[node name="SelectGrid" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=145599952]
+layout_mode = 2
+columns = 9
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/SelectGrid" unique_id=1973865297]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "1"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/SelectGrid" unique_id=1042404421]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "2"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/SelectGrid" unique_id=305706238]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "3"
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/SelectGrid" unique_id=696485111]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "4"
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/SelectGrid" unique_id=153421783]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "5"
+
+[node name="Button6" type="Button" parent="MarginContainer/VBoxContainer/SelectGrid" unique_id=88566301]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "6"
+
+[node name="Button7" type="Button" parent="MarginContainer/VBoxContainer/SelectGrid" unique_id=61301537]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "7"
+
+[node name="Button8" type="Button" parent="MarginContainer/VBoxContainer/SelectGrid" unique_id=1734465758]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "8"
+
+[node name="Button9" type="Button" parent="MarginContainer/VBoxContainer/SelectGrid" unique_id=994239435]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "9"

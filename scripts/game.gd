@@ -1,6 +1,6 @@
 extends Node2D
-@onready var select_grid: GridContainer = $MarginContainer/VBoxContainer/SelectGrid
-@onready var grid: GridContainer = $MarginContainer/VBoxContainer/Grid
+@onready var select_grid: VBoxContainer = $NinePatchRect/MarginContainer/HBoxContainer/SelectGrid
+@onready var grid: GridContainer = $NinePatchRect/MarginContainer/HBoxContainer/ColorRect/Grid
 
 
 const GRID_SIZE = 9
@@ -8,7 +8,7 @@ var game_grid = []
 var solved = false
 var selected_button:Vector2i = Vector2i(-1,-1)
 var grid_selected:Button = null
-var colors:Dictionary = {"0":Color.BLACK, "1":Color.DARK_RED, "2":Color.DEEP_PINK, "3":Color.GOLD, "4":Color.WEB_GREEN, "5":Color.PURPLE, "6":Color.AQUA, "7":Color.HOT_PINK, "8":Color.SILVER, "9":Color.YELLOW}
+var colors:Dictionary = {"0":Color.BLACK, "1":Color.DARK_RED, "2":Color.GOLD, "3":Color.WEB_GREEN, "4":Color.PURPLE}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 func init_game():
 	grid.columns = GRID_SIZE
 	for button:Button in select_grid.get_children():
-		button.modulate = colors.get(button.text)
+		button.modulate = colors.get(button.name)
 	_populate_grid()
 
 func _populate_grid():
@@ -35,12 +35,12 @@ func _populate_grid():
 
 func create_button(pos: Vector2i):
 	var button = Button.new()
-	button.set("theme_override_font_sizes/font_size", 32)
-	button.text = str(randi_range(0,9))
+	button.set("theme_override_font_sizes/font_size", 16)
+	button.text = str(clampi(randi_range(-4,4),0,4))
 	if button.text == "0":
 		button.text = ""
 		button.modulate = colors.get("0")
-	button.custom_minimum_size = Vector2i(42,50)
+	button.custom_minimum_size = Vector2i(25,25)
 	button.pressed.connect(_on_grid_button_pressed.bind(pos))
 	grid.add_child(button)
 	return button
@@ -56,7 +56,7 @@ func _on_select_grid_button_pressed(number_pressed):
 	if selected_button != Vector2i(-1,-1):
 		if number_pressed == grid_selected.text:
 			grid_selected.modulate = colors.get(grid_selected.text)
-			grid_selected.modulate.v *=1.5
+			grid_selected.modulate.v = 1.0
 			grid_selected.text = ""
 			check_solution()
 	selected_button = Vector2i(-1,-1)
@@ -78,5 +78,5 @@ func display_win_screen():
 
 func bind_select_grid_button_actions():
 	for button:Button in select_grid.get_children():
-		button.pressed.connect(_on_select_grid_button_pressed.bind(button.text))
+		button.pressed.connect(_on_select_grid_button_pressed.bind(button.name))
 		

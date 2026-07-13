@@ -1,4 +1,7 @@
+ColorRect
 VBoxContainer
+HBoxContainer
+NinePatchRect
 Button
 GridContainer
 MarginContainer

@@ -1,0 +1,31 @@
+extends Node2D
+
+
+# This script is responsible for switching between the different 
+# minigames and menus in the game. It also handles the score and 
+# the timer for the minigames.
+
+const MINIGAMES = ["mini_ions", "mini_oven", "mini_etch", "mini_pack", "mini_plg", "mini_probe"]
+const MENUS = ["menu_main", "menu_settings", "menu_finish", "menu_mini"]
+var current_scene = null
+var scene_manager = null
+var music_player = null
+
+func _initialize():
+	scene_manager = get_tree().get_root().get_node("SceneManager")
+	scene_manager.switch_scene(current_scene)
+	music_player = get_tree().get_root().get_node("MusicPlayer")
+	music_player.play_music("res://assets/music/science.mp3")
+
+func switch_scene(scene_name):
+	# Logic to switch between different scenes (minigames and menus)
+		if scene_name in MINIGAMES or scene_name in MENUS:
+			current_scene = scene_name
+			scene_manager.switch_scene(current_scene)
+		else:
+			print("Scene not found: ", scene_name)
+	
+
+func update_score():
+	# Logic to update the score based on the player's performance in the minigames
+	pass

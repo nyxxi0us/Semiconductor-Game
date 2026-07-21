@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cppwa0e204rlp"
-path="res://.godot/imported/Possible 9-Square.png-4221cd254212543352fdbd992318821a.ctex"
+path="res://.godot/imported/Possible 9-Square.png-0284773f4580b4613da7a6e1b856af6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Possible 9-Square.png"
-dest_files=["res://.godot/imported/Possible 9-Square.png-4221cd254212543352fdbd992318821a.ctex"]
+source_file="res://sprites/Possible 9-Square.png"
+dest_files=["res://.godot/imported/Possible 9-Square.png-0284773f4580b4613da7a6e1b856af6d.ctex"]
 
 [params]
 

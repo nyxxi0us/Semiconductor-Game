@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 const MINIGAMES = ["mini_ions", "mini_oven", "mini_etch", "mini_pack", "mini_plg", "mini_probe"]
 

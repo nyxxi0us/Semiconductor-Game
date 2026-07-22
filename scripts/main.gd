@@ -25,7 +25,13 @@ func switch_scene(scene_name):
 		else:
 			print("Scene not found: ", scene_name)
 	
+func _on_minigame_finished(score):
+	# Logic to handle when a minigame is finished
+	print("Minigame finished with score: ", score)
+	# You can add logic here to update the score, show results, etc.
+	switch_scene("menu_finish")  # Switch to the finish menu after a minigame is completed
 
-func update_score():
-	# Logic to update the score based on the player's performance in the minigames
-	pass
+func _on_menu_selected(menu_name):
+	# Logic to handle when a menu is selected
+	print("Menu selected: ", menu_name)
+	switch_scene(menu_name)  # Switch to the selected menu

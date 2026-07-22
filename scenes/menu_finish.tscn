@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://n1sk1k5tk78i"]
 
-[ext_resource type="Script" uid="uid://byn4yx7435yr7" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://df7iq63it6wsy" path="res://scripts/menu_finish.gd" id="1_xrer3"]
 
 [node name="Main" type="Control" unique_id=321816325]
 layout_mode = 3
@@ -9,4 +9,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
+script = ExtResource("1_xrer3")

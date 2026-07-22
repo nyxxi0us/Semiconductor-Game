@@ -1,7 +1,11 @@
+Button
+AudioStreamPlayer
+Label
+MarginContainer
 ColorRect
 VBoxContainer
+CheckBox
+HSlider
 HBoxContainer
 NinePatchRect
-Button
 GridContainer
-MarginContainer

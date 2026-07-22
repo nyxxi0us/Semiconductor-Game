@@ -10,3 +10,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o5qli")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1775780561]

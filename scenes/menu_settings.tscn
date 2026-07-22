@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://n1sk1k5tk78i"]
 
-[ext_resource type="Script" uid="uid://byn4yx7435yr7" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://bs6i7cykh4in2" path="res://scripts/menu_settings.gd" id="1_t4ura"]
 
 [node name="Main" type="Control" unique_id=321816325]
 layout_mode = 3
@@ -9,4 +9,57 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_o5qli")
+script = ExtResource("1_t4ura")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2145867652]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1754325265]
+layout_mode = 2
+color = Color(1, 0.45882353, 0.11764706, 0.3254902)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect" unique_id=453775292]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer" unique_id=259110251]
+layout_mode = 2
+alignment = 1
+
+[node name="MVolumeLabel" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=641601240]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="MusicVolumeSlider" type="HSlider" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=606461796]
+layout_mode = 2
+
+[node name="SFXVolLable" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=1070978372]
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="SFXVolumeSlider" type="HSlider" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=301423585]
+layout_mode = 2
+
+[node name="FSLabel" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=1412546116]
+layout_mode = 2
+text = "Fullscreen Toggle"
+
+[node name="FullscreenCheckbox" type="CheckBox" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=1464649405]
+layout_mode = 2

@@ -1,9 +1,9 @@
 extends Control
 
-dict SETTINGS = {
-    "music_volume": 0.5,
-    "sfx_volume": 0.5,
-    "fullscreen": false
+var SETTINGS: Dictionary = {
+	"music_volume": 0.5,
+	"sfx_volume": 0.5,
+	"fullscreen": false
 }
 
 @onready var music_volume_slider: HSlider = $MusicVolumeSlider
@@ -11,30 +11,30 @@ dict SETTINGS = {
 @onready var fullscreen_checkbox: CheckBox = $FullscreenCheckbox
 
 func _ready():
-    # Load settings from a file or set default values
-    load_settings()
-    # Connect signals for UI elements (e.g., sliders, checkboxes)
-    connect_ui_signals()
+	# Load settings from a file or set default values
+	load_settings()
+	# Connect signals for UI elements (e.g., sliders, checkboxes)
+	connect_ui_signals()
 
 func load_settings():
-    # Load settings from a file (if exists) or use default values
-    var settings_file = File.new()
-    if settings_file.file_exists("user://settings.cfg"):    
-        settings_file.open("user://settings.cfg", File.READ)
-        var loaded_settings = parse_json(settings_file.get_as_text())
-        SETTINGS.update(loaded_settings)
-        settings_file.close()
-    else:
-        save_settings()  # Save default settings if no file exists 
+	# Load settings from a file (if exists) or use default values
+	pass
 
 func save_settings():
-    # Save current settings to a file
-    var settings_file = File.new()
-    settings_file.open("user://settings.cfg", File.WRITE)
-    settings_file.store_string(to_json(SETTINGS))
-
+	# Save current settings to a file
+	pass
+	
 func connect_ui_signals():
-    # Connect signals for UI elements to update settings
-    $MusicVolumeSlider.connect("value_changed", self, "_on_music_volume_changed")
-    $SFXVolumeSlider.connect("value_changed", self, "_on_sfx_volume_changed")
-    $FullscreenCheckbox.connect("toggled", self, "_on_fullscreen_toggled")
+	# Connect signals for UI elements to update settings
+	$MusicVolumeSlider.connect("value_changed", _on_music_volume_changed)
+	$SFXVolumeSlider.connect("value_changed", _on_sfx_volume_changed)
+	$FullscreenCheckbox.connect("toggled", _on_fullscreen_toggled)
+
+func _on_music_volume_changed():
+	SETTINGS["music_volume"] = music_volume_slider.value
+
+func _on_sfx_volume_changed():
+	SETTINGS["sfx_volume"] = sfx_volume_slider.value
+
+func _on_fullscreen_toggled():
+	SETTINGS["fullscreen"] = fullscreen_checkbox.button_pressed

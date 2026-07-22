@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Circuit game"
+run/main_scene="uid://n1sk1k5tk78i"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Main="*uid://n1sk1k5tk78i"
 
 [display]
 

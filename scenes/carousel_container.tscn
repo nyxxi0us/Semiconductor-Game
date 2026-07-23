@@ -4,13 +4,3 @@
 
 [node name="CarouselContainer" type="Node2D" unique_id=356690735]
 script = ExtResource("1_k4f7s")
-spacing = null
-wraparound_enabled = null
-wraparound_radius = null
-wraparound_height = null
-opacity_strength = null
-scale_strength = null
-scale_min = null
-smoothing_speed = null
-selected_index = null
-follow_button_focus = null

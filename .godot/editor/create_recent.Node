@@ -1,9 +1,11 @@
+Control
+CarouselContainer
+VBoxContainer
 Button
 AudioStreamPlayer
 Label
 MarginContainer
 ColorRect
-VBoxContainer
 CheckBox
 HSlider
 HBoxContainer

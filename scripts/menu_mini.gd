@@ -9,8 +9,8 @@ func _ready():
 
 func _on_button_pressed(button_name):
 	if button_name in MINIGAMES:
-		Main.switch_scenes(button_name)
+		SceneManager.switch_scene(button_name)
 	elif button_name == "BackButton":
-		Main.switch_scenes("menu_main")
+		SceneManager.switch_scene("menu_main")
 	else:
 		print("Button pressed: ", button_name)

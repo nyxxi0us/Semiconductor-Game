@@ -11,10 +11,8 @@ func _ready():
 	
 func _on_button_pressed(button_name):
 	if button_name == "BackButton":
-		Main.switch_scene("menu_mini")
+		SceneManager.switch_scene("menu_mini")
 	elif button_name == "QuitButton":
 		get_tree().quit()
 	elif button_name == "RetryButton":
-		Main.switch_scene(Main.current_scene)
-	else:
-		print("Button pressed: ", button_name)
+		SceneManager.switch_scene(Main.current_scene)

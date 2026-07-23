@@ -1,10 +1,11 @@
-res://scenes/menu_settings.tscn
-res://scripts/menu_settings.gd
-res://scripts/mini_etch.gd
-res://scenes/menu_mini.tscn
-res://scripts/menu_mini.gd
 res://scenes/main.tscn
 res://scripts/main.gd
-res://scripts/menu_finish.gd
+res://scenes/menu_start.tscn
+res://scripts/menu_start.gd
+res://scenes/menu_settings.tscn
 res://scenes/menu_finish.tscn
+res://scripts/menu_finish.gd
+res://scenes/carousel_container.tscn
 res://scripts/carousel_container.gd
+res://scenes/menu_mini.tscn
+res://scripts/menu_mini.gd

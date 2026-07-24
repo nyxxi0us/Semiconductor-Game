@@ -1,6 +1,7 @@
 # Chip's Challenge: Semiconductor Scramble
 Chip the semiconductor wafer leads us through each step in the semiconductor manufacturing process.
-![Chip, the MERC mascot](/sprites/Chip Design Element.png)
+
+<img src="/sprites/Chip%20Design%20Element.png" alt="Chip, the MERC mascot" width="456" height="364">
 
 ## Game 1 - Ion Deposition
 The wafer is etched and ready for Ion Deposition! Watch the magnifying glass show you the pattern of ions to place on the etched wafer! Complete all of the payterns to move on!
@@ -25,4 +26,5 @@ Piece together the correct case and mount for each die as it rolls of the convey
 - Customer orders to fill out
 - Silicon Wafer Cutting
 - Silicon Ingot Forge
+
 ![MERC Banner](sprites/Boise-State-MERC_Sponsorship_Graphic_RGB.png)

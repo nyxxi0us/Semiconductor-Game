@@ -2,7 +2,7 @@
 Chip the semiconductor wafer leads us through each step in the semiconductor manufacturing process.
 
 ## Game 1 - Ion Deposition
-Fill in the etched wafer with the matching color Ions to make the layouts match.
+The wafer is etched and ready for Ion Deposition! Watch the magnifying glass show you the pattern of ions to place on the etched wafer! Complete all of the payterns to move on!
 
 ## Game 2 - Oxidation
 Watch the wafers and make sure the bake for the right amount of time to gather enough oxygen.

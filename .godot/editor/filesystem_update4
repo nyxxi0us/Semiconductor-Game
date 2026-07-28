@@ -1,4 +1,2 @@
-res://scenes/main_scene.tscn
-res://scripts/scene_manager.gd
 res://scenes/mini_ions.tscn
-res://scripts/mini_ions.gd
+res://scripts/menu_start.gd

@@ -1,4 +1,4 @@
-extends Control
+class_name StartMenu extends Control
 
 enum Menubuttons {
 	START,

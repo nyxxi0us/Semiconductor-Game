@@ -12,101 +12,116 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xpd8i")
 
-[node name="CarouselContainer" type="Node2D" parent="." unique_id=1741619817 node_paths=PackedStringArray("position_offset_node")]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1455385353]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 400
+alignment = 1
+
+[node name="LeftButton" type="Button" parent="HBoxContainer" unique_id=983840016]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "<<"
+
+[node name="RightButton" type="Button" parent="HBoxContainer" unique_id=1553267487]
+layout_mode = 2
+size_flags_horizontal = 3
+text = ">>"
+
+[node name="CarouselContainer" type="Node2D" parent="." unique_id=1186122476 node_paths=PackedStringArray("position_offset_node")]
+position = Vector2(288, 158)
 script = ExtResource("2_6i3xb")
+wraparound_enabled = true
+follow_button_focus = true
 position_offset_node = NodePath("Control")
 metadata/_custom_type_script = "uid://b76bqbpvrspsf"
 
-[node name="Control" type="Control" parent="CarouselContainer" unique_id=154158015]
+[node name="Control" type="Control" parent="CarouselContainer" unique_id=571987900]
 layout_mode = 3
 anchors_preset = 0
-offset_left = nan
-offset_top = nan
-offset_right = nan
-offset_bottom = nan
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="mini_ions" type="Button" parent="." unique_id=587495312]
+[node name="mini_oven" type="Button" parent="CarouselContainer/Control" unique_id=2036227281]
 z_index = 1
 layout_mode = 0
-offset_left = nan
-offset_top = nan
-offset_right = nan
-offset_bottom = nan
-pivot_offset = Vector2(nan, nan)
-text = "Ions Sorting"
+offset_left = -55.5
+offset_top = -15.5
+offset_right = 55.5
+offset_bottom = 15.5
+pivot_offset = Vector2(55.5, 31)
+text = "Oxidation"
 
-[node name="mini_oven" type="Button" parent="." unique_id=1687064115]
+[node name="mini_plg" type="Button" parent="CarouselContainer/Control" unique_id=1706590878]
 modulate = Color(1, 1, 1, 0.65)
 z_index = -1
 layout_mode = 0
-offset_left = nan
-offset_top = nan
-offset_right = nan
-offset_bottom = nan
+offset_left = 213.81696
+offset_top = -50.04915
+offset_right = 356.81696
+offset_bottom = -19.049149
 scale = Vector2(0.75, 0.75)
-pivot_offset = Vector2(nan, nan)
+pivot_offset = Vector2(71.5, 31)
 focus_mode = 0
 mouse_filter = 2
-text = "Oxidation"
+text = "Photolithography"
 
-[node name="mini_pack" type="Button" parent="." unique_id=1648862425]
+[node name="mini_ions" type="Button" parent="CarouselContainer/Control" unique_id=1360166185]
 modulate = Color(1, 1, 1, 0.3)
 z_index = -2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = nan
-anchor_top = nan
-offset_left = nan
-offset_top = nan
-offset_right = nan
-offset_bottom = nan
+layout_mode = 0
+offset_left = 115.83548
+offset_top = -105.95085
+offset_right = 236.83566
+offset_bottom = -74.95085
 scale = Vector2(0.5, 0.5)
-pivot_offset = Vector2(nan, nan)
+pivot_offset = Vector2(60.50009, 31)
 focus_mode = 0
 mouse_filter = 2
-text = "Chip Packing"
+text = "Ion Deposition"
 
-[node name="mini_etch" type="Button" parent="." unique_id=1690597358]
+[node name="mini_etch" type="Button" parent="CarouselContainer/Control" unique_id=333890042]
 modulate = Color(1, 1, 1, 0)
 z_index = -3
 layout_mode = 0
-offset_left = nan
-offset_top = nan
-offset_right = nan
-offset_bottom = nan
+offset_left = -71.5
+offset_top = -115.5
+offset_right = 71.5
+offset_bottom = -84.5
 scale = Vector2(0.25, 0.25)
-pivot_offset = Vector2(nan, nan)
+pivot_offset = Vector2(71.5, 31)
 focus_mode = 0
 mouse_filter = 2
-text = "Gas Etching"
+text = "Dry Etching"
 
-[node name="mini_probe" type="Button" parent="." unique_id=1580851218]
+[node name="mini_probe" type="Button" parent="CarouselContainer/Control" unique_id=1965763399]
 modulate = Color(1, 1, 1, 0)
 z_index = -4
 layout_mode = 0
-offset_left = nan
-offset_top = nan
-offset_right = nan
-offset_bottom = nan
+offset_left = -71.500046
+offset_top = -115.5
+offset_right = 71.500046
+offset_bottom = -84.5
 scale = Vector2(0.1, 0.1)
-pivot_offset = Vector2(nan, nan)
+pivot_offset = Vector2(71.500046, 31)
 focus_mode = 0
 mouse_filter = 2
 text = "Die Sorting"
 
-[node name="mini_plg" type="Button" parent="." unique_id=1970314247]
+[node name="mini_pack" type="Button" parent="CarouselContainer/Control" unique_id=1397588063]
 modulate = Color(1, 1, 1, 0)
 z_index = -5
-layout_mode = 1
-anchors_preset = -1
-anchor_left = nan
-anchor_top = nan
-offset_left = nan
-offset_top = nan
-offset_right = nan
-offset_bottom = nan
+layout_mode = 0
+offset_left = -71.50003
+offset_top = -115.5
+offset_right = 71.50003
+offset_bottom = -84.5
 scale = Vector2(0.1, 0.1)
-pivot_offset = Vector2(nan, nan)
+pivot_offset = Vector2(71.50003, 31)
 focus_mode = 0
 mouse_filter = 2
-text = "Photolithography"
+text = "Microhip Packing"

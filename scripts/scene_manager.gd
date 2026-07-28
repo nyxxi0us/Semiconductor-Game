@@ -15,21 +15,24 @@ var music_path = "res://music/"
 
 @onready var music_player: AudioStreamPlayer = $MusicPlayer
 
+
 func _init() -> void:
 	load_audio_from_folder()
 
 func _ready() -> void:
-	switch_scene(current_scene)
 	play_music()
+	switch_scene(current_scene)
+
 
 func switch_scene(scene_name):
 	# Logic to switch between different scenes (minigames and menus)
-		if scene_name in MINIGAMES or scene_name in MENUS:
-			previous_scene = current_scene
-			current_scene = scene_name
-			get_tree().change_scene_to_file("res://scenes/menu_start.tscn")
-		else:
-			print("Scene not found: ", scene_name)
+	if scene_name in MINIGAMES or scene_name in MENUS:
+		print(scene_name + " is selected")
+		previous_scene = current_scene
+		current_scene = scene_name
+		get_tree().change_scene_to_file("res://scenes/"+scene_name+".tscn")
+	else:
+		print("Scene not found: ", scene_name)
 
 func load_audio_from_folder():
 	var dir = DirAccess.open(music_path)
@@ -50,7 +53,7 @@ func play_music():
 		music_player.play()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("ui_cancel"):
+	if event.is_action_pressed("ui_cancel"):
 		if current_scene != "menu_settings":
 			switch_scene("menu_settings")
 		else:

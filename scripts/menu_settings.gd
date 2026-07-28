@@ -1,4 +1,4 @@
-extends Control
+class_name Settings extends Control
 
 var SETTINGS: Dictionary = {
 	"music_volume": 0.5,
@@ -6,9 +6,9 @@ var SETTINGS: Dictionary = {
 	"fullscreen": false
 }
 
-@onready var music_volume_slider: HSlider = $MusicVolumeSlider
-@onready var sfx_volume_slider: HSlider = $SFXVolumeSlider
-@onready var fullscreen_checkbox: CheckBox = $FullscreenCheckbox
+@onready var sfx_volume_slider: HSlider = $MarginContainer/ColorRect/MarginContainer/VBoxContainer/SFXVolumeSlider
+@onready var music_volume_slider: HSlider = $MarginContainer/ColorRect/MarginContainer/VBoxContainer/MusicVolumeSlider
+@onready var fullscreen_checkbox: CheckBox = $MarginContainer/ColorRect/MarginContainer/VBoxContainer/FullscreenCheckbox
 
 func _ready():
 	# Load settings from a file or set default values
@@ -26,9 +26,9 @@ func save_settings():
 	
 func connect_ui_signals():
 	# Connect signals for UI elements to update settings
-	$MusicVolumeSlider.connect("value_changed", _on_music_volume_changed)
-	$SFXVolumeSlider.connect("value_changed", _on_sfx_volume_changed)
-	$FullscreenCheckbox.connect("toggled", _on_fullscreen_toggled)
+	music_volume_slider.connect("value_changed", _on_music_volume_changed)
+	sfx_volume_slider.connect("value_changed", _on_sfx_volume_changed)
+	fullscreen_checkbox.connect("toggled", _on_fullscreen_toggled)
 
 func _on_music_volume_changed():
 	SETTINGS["music_volume"] = music_volume_slider.value

@@ -1,11 +1,13 @@
 extends Node2D
 @onready var select_grid: VBoxContainer = $NinePatchRect/MarginContainer/HBoxContainer/SelectGrid
 @onready var grid: GridContainer = $NinePatchRect/MarginContainer/HBoxContainer/ColorRect/Grid
+@onready var hint_grid: GridContainer = $NinePatchRect/MarginContainer/HBoxContainer/ColorRect2/HintGrid
 
 
 const GRID_SIZE = 9
 var game_grid = []
-var solved = false
+var solution_grid = []
+var solved = 0
 var selected_button:Vector2i = Vector2i(-1,-1)
 var grid_selected:Button = null
 var colors:Dictionary = {"0":Color.BLACK, "1":Color.DARK_RED, "2":Color.GOLD, "3":Color.WEB_GREEN, "4":Color.PURPLE}
@@ -23,20 +25,39 @@ func init_game():
 	grid.columns = GRID_SIZE
 	for button:Button in select_grid.get_children():
 		button.modulate = colors.get(button.name)
-	_populate_grid()
+	_create_solution()
 
-func _populate_grid():
-	game_grid = []
+func _create_solution():
+	solution_grid = []
 	for i in range(GRID_SIZE):
 		var row = []
 		for j in range(GRID_SIZE):
-			row.append(create_button(Vector2i(i,j)))
-		game_grid.append(row)
+			var value = clampi(randi_range(-4,4),0,4)
+			row.append(value)
+		solution_grid.append(row)
+	_populate_game_grids()
+
+func _populate_game_grids():
+	game_grid = []
+	for i in range(GRID_SIZE):
+		var game_row = []
+		for j in range(GRID_SIZE):
+			game_row.append(create_button(Vector2i(i,j)))
+			create_panel(Vector2i(i,j))
+		game_grid.append(game_row)
+
+func create_panel(pos: Vector2i):
+	var panel = Panel.new()
+	panel.name = str(solution_grid[pos.x][pos.y])
+	if panel.name == "0":
+		panel.modulate.a = 0
+	panel.custom_minimum_size = Vector2i(25,25)
+	hint_grid.add_child(panel)
 
 func create_button(pos: Vector2i):
 	var button = Button.new()
 	button.set("theme_override_font_sizes/font_size", 16)
-	button.text = str(clampi(randi_range(-4,4),0,4))
+	button.text = str(solution_grid[pos.x][pos.y])
 	if button.text == "0":
 		button.text = ""
 		button.modulate = colors.get("0")

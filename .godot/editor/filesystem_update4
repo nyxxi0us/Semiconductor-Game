@@ -1,11 +1,4 @@
-res://scenes/main.tscn
-res://scripts/main.gd
-res://scenes/menu_start.tscn
-res://scripts/menu_start.gd
-res://scenes/menu_settings.tscn
-res://scenes/menu_finish.tscn
-res://scripts/menu_finish.gd
-res://scenes/carousel_container.tscn
-res://scripts/carousel_container.gd
-res://scenes/menu_mini.tscn
-res://scripts/menu_mini.gd
+res://scenes/main_scene.tscn
+res://scripts/scene_manager.gd
+res://scenes/mini_ions.tscn
+res://scripts/mini_ions.gd

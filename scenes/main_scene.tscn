@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://n1sk1k5tk78i"]
 
-[ext_resource type="Script" uid="uid://byn4yx7435yr7" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://nbkjdwhc1i3f" path="res://scripts/scene_manager.gd" id="1_we8k5"]
 
-[node name="SceneManager" type="Control" unique_id=321816325]
+[node name="MainScene" type="Control" unique_id=321816325]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_o5qli")
+script = ExtResource("1_we8k5")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1775780561]

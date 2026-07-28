@@ -1,13 +1,14 @@
+Button
+Panel
+HBoxContainer
 Control
+Label
 CarouselContainer
 VBoxContainer
-Button
 AudioStreamPlayer
-Label
 MarginContainer
 ColorRect
 CheckBox
 HSlider
-HBoxContainer
 NinePatchRect
 GridContainer

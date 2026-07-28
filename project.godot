@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Circuit game"
+config/description="Chip the semiconductor wafer leads us through each step in the semiconductor manufacturing process."
 run/main_scene="uid://n1sk1k5tk78i"
 config/features=PackedStringArray("4.7", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://cxuyn8ycpftva"
 
 [autoload]
 
-SceneManager="*uid://n1sk1k5tk78i"
+MainScene="*uid://n1sk1k5tk78i"
 
 [display]
 
@@ -34,6 +35,7 @@ project/assembly_name="Circuit game"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
 textures/default_filters/use_nearest_mipmap_filter=true

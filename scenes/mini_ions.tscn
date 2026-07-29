@@ -25,11 +25,13 @@ grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer" unique_id=947255106]
 layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="NinePatchRect/MarginContainer/HBoxContainer" unique_id=2096565857]
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.4745098, 1, 1, 0.3764706)
+color = Color(0.4745098, 1, 1, 0)
 
 [node name="Grid" type="GridContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/ColorRect" unique_id=681295719]
 layout_mode = 1
@@ -72,9 +74,10 @@ theme_override_font_sizes/font_size = 16
 text = "ION 4"
 
 [node name="ColorRect2" type="ColorRect" parent="NinePatchRect/MarginContainer/HBoxContainer" unique_id=1588540371]
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.4745098, 1, 1, 0.3764706)
+color = Color(0.14117648, 0.5803922, 0.105882354, 0.99215686)
 
 [node name="HintGrid" type="GridContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/ColorRect2" unique_id=1556429015]
 layout_mode = 1

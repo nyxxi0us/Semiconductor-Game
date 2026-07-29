@@ -1,36 +1,46 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785206721
+::res://::1785290015
+export_presets.cfg::TextFile::-1::1785289195::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::6429954519746297070::1783716076::1783716076::1::::<><><>0<>0<>037771bd217aa92cf50c4f51b9a50bf7<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1785206478::0::1::::<><><>0<>0<><>::
+::res://addons/::1758121346
+::res://addons/godot-git-plugin/::1758121346
+git_plugin.gdextension::GDExtension::2500427590917420308::1758121346::0::1::::<><><>0<>0<><>::
+THIRDPARTY.md::TextFile::-1::1758121346::0::1::::<><><>0<>0<><>::
+::res://addons/godot-git-plugin/linux/::1758121346
+::res://addons/godot-git-plugin/macos/::1758121346
+::res://addons/godot-git-plugin/windows/::1758121346
 ::res://music/::1784618480
 Science.mp3::AudioStreamMP3::5615029008622460457::1784616017::1784618480::1::::<><><>0<>0<>190917eadd3c54cee127f41ccfac99a3<>res://.godot/imported/Science.mp3-1f9ee0a46e6236584a5c877bfd2c9ab4.mp3str::
-::res://scenes/::1785206478
+::res://scenes/::1785289639
 carousel_container.tscn::PackedScene::6175647293471998657::1784792479::0::1::::<><><>0<>0<><>::uid://b76bqbpvrspsf::::res://scripts/carousel_container.gd
-main_scene.tscn::PackedScene::967240935152852650::1785206478::0::1::::<><><>0<>0<><>::uid://nbkjdwhc1i3f::::res://scripts/scene_manager.gd
+main_scene.tscn::PackedScene::967240935152852650::1785287612::0::1::::<><><>0<>0<><>::uid://bq0n5lhulf64v::::res://scripts/main_scene.gd
 menu_container.tscn::PackedScene::342262173872313096::1784739164::0::1::::<><><>0<>0<><>::
 menu_finish.tscn::PackedScene::967240935152852650::1785035486::0::1::::<><><>0<>0<><>::uid://df7iq63it6wsy::::res://scripts/menu_finish.gd
-menu_mini.tscn::PackedScene::967240935152852650::1785206478::0::1::::<><><>0<>0<><>::uid://c5rdwii3e1n3y::::res://scripts/menu_mini.gd<>uid://b76bqbpvrspsf::::res://scripts/carousel_container.gd
+menu_mini.tscn::PackedScene::967240935152852650::1785289639::0::1::::<><><>0<>0<><>::uid://c5rdwii3e1n3y::::res://scripts/menu_mini.gd<>uid://b76bqbpvrspsf::::res://scripts/carousel_container.gd
 menu_settings.tscn::PackedScene::967240935152852650::1785037136::0::1::::<><><>0<>0<><>::uid://bs6i7cykh4in2::::res://scripts/menu_settings.gd
-menu_start.tscn::PackedScene::967240935152852650::1785035884::0::1::::<><><>0<>0<><>::uid://cn3wx7n1ogqsw::::res://scripts/menu_start.gd
+menu_start.tscn::PackedScene::967240935152852650::1785289304::0::1::::<><><>0<>0<><>::uid://cn3wx7n1ogqsw::::res://scripts/menu_start.gd
 mini_etch.tscn::PackedScene::5482589584062970875::1784689742::0::1::::<><><>0<>0<><>::uid://cau8uxufmhn7l::::res://scripts/mini_ions.gd<>uid://cppwa0e204rlp::::res://sprites/Possible 9-Square.png
-mini_ions.tscn::PackedScene::5482589584062970875::1785206478::0::1::::<><><>0<>0<><>::uid://cau8uxufmhn7l::::res://scripts/mini_ions.gd<>uid://cppwa0e204rlp::::res://sprites/Possible 9-Square.png
+mini_ions.tscn::PackedScene::5482589584062970875::1785289266::0::1::::<><><>0<>0<><>::uid://cau8uxufmhn7l::::res://scripts/mini_ions.gd<>uid://cppwa0e204rlp::::res://sprites/Possible 9-Square.png
 mini_oven.tscn::PackedScene::5482589584062970875::1784689683::0::1::::<><><>0<>0<><>::uid://cau8uxufmhn7l::::res://scripts/mini_ions.gd<>uid://cppwa0e204rlp::::res://sprites/Possible 9-Square.png
 mini_pack.tscn::PackedScene::5482589584062970875::1784689710::0::1::::<><><>0<>0<><>::uid://cau8uxufmhn7l::::res://scripts/mini_ions.gd<>uid://cppwa0e204rlp::::res://sprites/Possible 9-Square.png
 mini_plg.tscn::PackedScene::5482589584062970875::1784689754::0::1::::<><><>0<>0<><>::uid://cau8uxufmhn7l::::res://scripts/mini_ions.gd<>uid://cppwa0e204rlp::::res://sprites/Possible 9-Square.png
 mini_probe.tscn::PackedScene::5482589584062970875::1785037241::0::1::::<><><>0<>0<><>::uid://cau8uxufmhn7l::::res://scripts/mini_ions.gd<>uid://cppwa0e204rlp::::res://sprites/Possible 9-Square.png
-::res://scripts/::1785206478
+::res://scripts/::1785289639
 carousel_container.gd::GDScript::4696548756854238629::1785206478::0::1::::CarouselContainer<>Node2D<><>0<>1<><>::
 main.gd::GDScript::4099594752479647122::1785206478::0::1::::<>Control<><>0<>0<><>::
-menu_finish.gd::GDScript::7576782337912484348::1785206478::0::1::::<>Control<><>0<>0<><>::
-menu_mini.gd::GDScript::6913822970614208532::1785206478::0::1::::<>Control<><>0<>0<><>::
+main_scene.gd::GDScript::3561895109970348547::1785287571::0::1::::<>Control<><>0<>0<><>::
+menu_finish.gd::GDScript::7576782337912484348::1785287302::0::1::::<>Control<><>0<>0<><>::
+menu_mini.gd::GDScript::6913822970614208532::1785289639::0::1::::<>Control<><>0<>0<><>::
 menu_settings.gd::GDScript::3714358603487489805::1785206478::0::1::::Settings<>Control<><>0<>0<><>::
-menu_start.gd::GDScript::5744477460924918346::1785206478::0::1::::<>Control<><>0<>0<><>::
+menu_start.gd::GDScript::5744477460924918346::1785287302::0::1::::StartMenu<>Control<><>0<>0<><>::
 mini_etch.gd::GDScript::1882094987287678385::1784693657::0::1::::<>Node2D<><>0<>0<><>::
-mini_ions.gd::GDScript::4816169538283434903::1785206478::0::1::::<>Node2D<><>0<>0<><>::
-scene_manager.gd::GDScript::915142778998789805::1785206478::0::1::::<>Control<><>0<>0<><>::
-::res://sprites/::1785206478
+mini_ions.gd::GDScript::4816169538283434903::1785288794::0::1::::<>Node2D<><>0<>0<><>::
+scene_manager.gd::GDScript::915142778998789805::1785287612::0::1::::<>Control<><>0<>0<><>::
+::res://sprites/::1785206743
 Boise-State-MERC_Sponsorship_Graphic_CMYK.svg::CompressedTexture2D::3149185629263432349::1785206478::1785206741::1::::<><><>0<>0<>60e9561197d609aa7ec983a92d7a495d<>res://.godot/imported/Boise-State-MERC_Sponsorship_Graphic_CMYK.svg-c09e1cfc10022074ecee91fe6d87fdb5.ctex::
 Boise-State-MERC_Sponsorship_Graphic_RGB.png::CompressedTexture2D::562259578706481783::1785206478::1785206741::1::::<><><>0<>0<>d6f3b7bdf138cfcba608f4a06c566a87<>res://.godot/imported/Boise-State-MERC_Sponsorship_Graphic_RGB.png-1a98763eac7ae4d6191eb539a84a2d6d.ctex::
 Boise-State-MERC_Sponsorship_Graphic_RGB.svg::CompressedTexture2D::129845928449306618::1785206478::1785206741::1::::<><><>0<>0<>7a44f254b31a3961542cedee773f0317<>res://.godot/imported/Boise-State-MERC_Sponsorship_Graphic_RGB.svg-e717923ca1ac1e239485053254e4000e.ctex::
 Chip Design Element.png::CompressedTexture2D::9159380037605471628::1785206478::1785206743::1::::<><><>0<>0<>72baf03c0c24274aa5426bcf3f74f387<>res://.godot/imported/Chip Design Element.png-f74a04712ed67e6d7923114f8611ad03.ctex::
 Possible 9-Square.png::CompressedTexture2D::5857976782632742689::1783914760::1785039117::1::::<><><>0<>0<>33aff88f1b9f92d1271bf022a57785d7<>res://.godot/imported/Possible 9-Square.png-0284773f4580b4613da7a6e1b856af6d.ctex::
+::res://Versions/::1785289254

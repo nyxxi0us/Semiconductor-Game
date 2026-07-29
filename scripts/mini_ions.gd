@@ -47,10 +47,12 @@ func _populate_game_grids():
 		game_grid.append(game_row)
 
 func create_panel(pos: Vector2i):
-	var panel = Panel.new()
+	var panel = ColorRect.new()
 	panel.name = str(solution_grid[pos.x][pos.y])
 	if panel.name == "0":
 		panel.modulate.a = 0
+	else:
+		panel.modulate = colors.get(panel.name)
 	panel.custom_minimum_size = Vector2i(25,25)
 	hint_grid.add_child(panel)
 

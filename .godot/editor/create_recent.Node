@@ -1,13 +1,13 @@
-Button
+ColorRect
 Panel
+VBoxContainer
+Button
 HBoxContainer
 Control
 Label
 CarouselContainer
-VBoxContainer
 AudioStreamPlayer
 MarginContainer
-ColorRect
 CheckBox
 HSlider
 NinePatchRect

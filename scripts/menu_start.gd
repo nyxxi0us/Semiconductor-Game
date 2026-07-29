@@ -19,11 +19,11 @@ func _ready():
 
 func _on_start_button_pressed():
 	# Switch to the minigame scene
-	MainScene.switch_scene("menu_mini")
+	SceneManager.switch_scene("menu_mini")
 
 func _on_settings_button_pressed():
 	# Switch to the settings menu scene
-	MainScene.switch_scene("menu_settings")
+	SceneManager.switch_scene("menu_settings")
 
 func _on_quit_button_pressed():
 	# Quit the game

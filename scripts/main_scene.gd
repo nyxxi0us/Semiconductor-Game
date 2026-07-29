@@ -31,7 +31,6 @@ func play_music():
 		music_player.set_stream(music[(current_track_number+1)%music.size()])
 		music_player.play()
 
-
 func _on_music_player_finished():
 	#Logic to loop music
 	play_music()

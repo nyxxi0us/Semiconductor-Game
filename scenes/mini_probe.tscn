@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://ckd2pjsrx6jcl"]
 
-[ext_resource type="Script" uid="uid://cau8uxufmhn7l" path="res://scripts/mini_ions.gd" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://dciyjhb47dtnd" path="res://scripts/mini_probe.gd" id="1_ed1ak"]
 [ext_resource type="Texture2D" uid="uid://cppwa0e204rlp" path="res://sprites/Possible 9-Square.png" id="2_yqjtg"]
 
 [node name="Game" type="Node2D" unique_id=1797306078]
-script = ExtResource("1_uwrxv")
+script = ExtResource("1_ed1ak")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1287773105]
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1150857301]
 custom_minimum_size = Vector2(300, 300)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("2_yqjtg")
@@ -18,53 +23,11 @@ patch_margin_right = 16
 patch_margin_bottom = 16
 metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=396726766]
-layout_mode = 1
-offset_right = 404.0
-offset_bottom = 311.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer" unique_id=947255106]
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="NinePatchRect/MarginContainer/HBoxContainer" unique_id=2096565857]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Grid" type="GridContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/ColorRect" unique_id=681295719]
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=1813935374]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 10
-size_flags_vertical = 8
-columns = 9
-
-[node name="SelectGrid" type="VBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer" unique_id=312440171]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="1" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/SelectGrid" unique_id=1973865297]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "ION 1"
-
-[node name="2" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/SelectGrid" unique_id=1042404421]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "ION 2"
-
-[node name="3" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/SelectGrid" unique_id=305706238]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "ION 3"
-
-[node name="4" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/SelectGrid" unique_id=696485111]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "ION 4"
+metadata/_edit_use_anchors_ = true

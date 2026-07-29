@@ -12,3 +12,4 @@ grow_vertical = 2
 script = ExtResource("1_w2twt")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1775780561]
+bus = &"MUSIC"

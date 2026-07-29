@@ -58,7 +58,8 @@ func create_panel(pos: Vector2i):
 
 func create_button(pos: Vector2i):
 	var button = Button.new()
-	button.set("theme_override_font_sizes/font_size", 16)
+	button.set("theme_override_font_sizes/font_size", 12)
+	button.set("theme_override_styles/normal", "res://default_button.tres")
 	button.text = str(solution_grid[pos.x][pos.y])
 	if button.text == "0":
 		button.text = ""

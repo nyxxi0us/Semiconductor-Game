@@ -16,14 +16,21 @@ run/main_scene="uid://n1sk1k5tk78i"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="uid://cxuyn8ycpftva"
 
+[audio]
+
+buses/default_bus_layout="uid://bc03sl6gx7c5l"
+
 [autoload]
 
 SceneManager="*uid://nbkjdwhc1i3f"
+ConfigFileHandler="*uid://cdax2cwoeoltp"
+MainScene="*uid://n1sk1k5tk78i"
 
 [display]
 
 window/size/viewport_width=600
 window/size/viewport_height=400
+window/stretch/mode="canvas_items"
 
 [dotnet]
 

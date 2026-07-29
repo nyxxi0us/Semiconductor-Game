@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cau8uxufmhn7l" path="res://scripts/mini_ions.gd" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://cppwa0e204rlp" path="res://sprites/Possible 9-Square.png" id="2_yqjtg"]
+[ext_resource type="StyleBox" uid="uid://c4sku60a6cndv" path="res://default_button.tres" id="3_demis"]
 
 [node name="Game" type="Node2D" unique_id=1797306078]
 script = ExtResource("1_uwrxv")
@@ -29,9 +30,10 @@ size_flags_vertical = 4
 alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="NinePatchRect/MarginContainer/HBoxContainer" unique_id=2096565857]
+custom_minimum_size = Vector2(225, 225)
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.4745098, 1, 1, 0)
+color = Color(0.14117648, 0.5803922, 0.105882354, 0.99215686)
 
 [node name="Grid" type="GridContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/ColorRect" unique_id=681295719]
 layout_mode = 1
@@ -53,28 +55,29 @@ alignment = 1
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "ION 1"
+theme_override_styles/normal = ExtResource("3_demis")
+text = "Boron+"
 
 [node name="2" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/SelectGrid" unique_id=1042404421]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "ION 2"
+text = "Phosphorus+"
 
 [node name="3" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/SelectGrid" unique_id=305706238]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "ION 3"
+text = "Arsenic+"
 
 [node name="4" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/SelectGrid" unique_id=696485111]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "ION 4"
+text = "Nitrogen+"
 
 [node name="ColorRect2" type="ColorRect" parent="NinePatchRect/MarginContainer/HBoxContainer" unique_id=1588540371]
-custom_minimum_size = Vector2(0, 300)
+custom_minimum_size = Vector2(225, 225)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0.14117648, 0.5803922, 0.105882354, 0.99215686)

@@ -9,6 +9,8 @@ const MINIGAMES = ["mini_ions", "mini_oven", "mini_etch", "mini_pack", "mini_plg
 const MENUS = ["menu_start", "menu_settings", "menu_finish", "menu_mini"]
 var current_scene: String = "menu_start"
 var previous_scene: String = ""
+var last_score: int = 0
+var highscores = {}
 
 func _ready() -> void:
 	switch_scene(current_scene)
@@ -22,6 +24,9 @@ func switch_scene(scene_name):
 		get_tree().change_scene_to_file("res://scenes/"+scene_name+".tscn")
 	else:
 		print("Scene not found: ", scene_name)
+
+func save_score(score, score_holder):
+	highscores[score_holder] = score
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):

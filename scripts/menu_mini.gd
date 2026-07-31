@@ -2,12 +2,12 @@ extends Control
 
 const MINIGAMES = ["mini_ions", "mini_oven", "mini_etch", "mini_pack", "mini_plg", "mini_probe"]
 
-@onready var mini_buttons: Array[Node] = $HBoxContainer/VBoxContainer/Control.get_children()
+@onready var mini_buttons: Array[Node] = $ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Control.get_children()
 @onready var carousel_container: CarouselContainer = $CarouselContainer
 
-@onready var left_button: Button = $HBoxContainer/LeftButton
-@onready var back_button: Button = $HBoxContainer/VBoxContainer/BackButton
-@onready var right_button: Button = $HBoxContainer/RightButton
+@onready var left_button: Button = $ColorRect/MarginContainer/HBoxContainer/LeftButton
+@onready var back_button: Button = $ColorRect/MarginContainer/HBoxContainer/VBoxContainer/BackButton
+@onready var right_button: Button = $ColorRect/MarginContainer/HBoxContainer/RightButton
 
 
 func _ready():

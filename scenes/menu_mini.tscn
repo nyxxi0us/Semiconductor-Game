@@ -12,38 +12,50 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xpd8i")
 
-[node name="CarouselContainer" type="Node2D" parent="." unique_id=1186122476 node_paths=PackedStringArray("position_offset_node")]
-position = Vector2(288, 158)
-script = ExtResource("2_6i3xb")
-wraparound_enabled = true
-follow_button_focus = true
-position_offset_node = NodePath("../HBoxContainer/VBoxContainer/Control")
-metadata/_custom_type_script = "uid://b76bqbpvrspsf"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1455385353]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1279784227]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(1, 0.45882353, 0.11764706, 0.3254902)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=43563428]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer" unique_id=1455385353]
+layout_mode = 2
 alignment = 1
 
-[node name="LeftButton" type="Button" parent="HBoxContainer" unique_id=983840016]
+[node name="LeftButton" type="Button" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=983840016]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "<<"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=627864464]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=627864464]
 layout_mode = 2
 size_flags_horizontal = 3
-alignment = 1
+size_flags_stretch_ratio = 5.97
+alignment = 2
 
-[node name="Control" type="Panel" parent="HBoxContainer/VBoxContainer" unique_id=508965578]
+[node name="Control" type="Panel" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=508965578]
 layout_mode = 2
+size_flags_horizontal = 8
 size_flags_vertical = 6
+offset_transform_enabled = true
+offset_transform_position = Vector2(175, 0)
 
-[node name="mini_oven" type="Button" parent="HBoxContainer/VBoxContainer/Control" unique_id=2036227281]
+[node name="mini_oven" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=2036227281]
 z_index = 1
 layout_mode = 0
 offset_left = -55.5
@@ -53,7 +65,7 @@ offset_bottom = 15.5
 pivot_offset = Vector2(55.5, 31)
 text = "Oxidation"
 
-[node name="mini_plg" type="Button" parent="HBoxContainer/VBoxContainer/Control" unique_id=1706590878]
+[node name="mini_plg" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=1706590878]
 modulate = Color(1, 1, 1, 0.65)
 z_index = -1
 layout_mode = 0
@@ -67,7 +79,7 @@ focus_mode = 0
 mouse_filter = 2
 text = "Photolithography"
 
-[node name="mini_ions" type="Button" parent="HBoxContainer/VBoxContainer/Control" unique_id=1360166185]
+[node name="mini_ions" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=1360166185]
 modulate = Color(1, 1, 1, 0.3)
 z_index = -2
 layout_mode = 0
@@ -81,7 +93,7 @@ focus_mode = 0
 mouse_filter = 2
 text = "Ion Deposition"
 
-[node name="mini_etch" type="Button" parent="HBoxContainer/VBoxContainer/Control" unique_id=333890042]
+[node name="mini_etch" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=333890042]
 modulate = Color(1, 1, 1, 0)
 z_index = -3
 layout_mode = 0
@@ -95,7 +107,7 @@ focus_mode = 0
 mouse_filter = 2
 text = "Dry Etching"
 
-[node name="mini_probe" type="Button" parent="HBoxContainer/VBoxContainer/Control" unique_id=1965763399]
+[node name="mini_probe" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=1965763399]
 modulate = Color(1, 1, 1, 0)
 z_index = -4
 layout_mode = 0
@@ -109,7 +121,7 @@ focus_mode = 0
 mouse_filter = 2
 text = "Die Sorting"
 
-[node name="mini_pack" type="Button" parent="HBoxContainer/VBoxContainer/Control" unique_id=1397588063]
+[node name="mini_pack" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=1397588063]
 modulate = Color(1, 1, 1, 0)
 z_index = -5
 layout_mode = 0
@@ -123,13 +135,21 @@ focus_mode = 0
 mouse_filter = 2
 text = "Microhip Packing"
 
-[node name="BackButton" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=745403277]
+[node name="BackButton" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=745403277]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
 text = "Back to Main"
 
-[node name="RightButton" type="Button" parent="HBoxContainer" unique_id=1553267487]
+[node name="RightButton" type="Button" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=1553267487]
 layout_mode = 2
 size_flags_horizontal = 3
 text = ">>"
+
+[node name="CarouselContainer" type="Node2D" parent="." unique_id=1186122476 node_paths=PackedStringArray("position_offset_node")]
+position = Vector2(288, 158)
+script = ExtResource("2_6i3xb")
+wraparound_enabled = true
+follow_button_focus = true
+position_offset_node = NodePath("../ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Control")
+metadata/_custom_type_script = "uid://b76bqbpvrspsf"

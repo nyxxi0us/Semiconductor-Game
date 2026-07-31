@@ -11,6 +11,7 @@ var solved = 0
 var selected_button:Vector2i = Vector2i(-1,-1)
 var grid_selected:Button = null
 var colors:Dictionary = {"0":Color.BLACK, "1":Color.DARK_RED, "2":Color.GOLD, "3":Color.WEB_GREEN, "4":Color.PURPLE}
+var score: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -98,7 +99,8 @@ func check_solution():
 		display_win_screen()
 
 func display_win_screen():
-	pass
+	SceneManager.last_score = score
+	SceneManager.switch_scene("menu_finish")
 
 func bind_select_grid_button_actions():
 	for button:Button in select_grid.get_children():

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://n1sk1k5tk78i"]
 
-[ext_resource type="Script" uid="uid://byn4yx7435yr7" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://cn3wx7n1ogqsw" path="res://scripts/menu_start.gd" id="1_ccu5i"]
+[ext_resource type="Texture2D" uid="uid://bljbt7h8eh448" path="res://sprites/Circuit Background.png" id="2_ncqf3"]
 
 [node name="Main" type="Control" unique_id=321816325]
 layout_mode = 3
@@ -9,4 +10,41 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_o5qli")
+script = ExtResource("1_ccu5i")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=360771048]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ncqf3")
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=818727933]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=469609650]
+layout_mode = 2
+alignment = 1
+
+[node name="StartButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1188596567]
+layout_mode = 2
+text = "START"
+
+[node name="SettingsButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=48729506]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="QuitButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=105253205]
+layout_mode = 2
+text = "QUIT"

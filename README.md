@@ -1,26 +1,44 @@
 # Chip's Challenge: Semiconductor Scramble
+
 Chip the semiconductor wafer leads us through each step in the semiconductor manufacturing process.
 
-## Game 1 - Ion Deposition
-Fill in the etched wafer with the matching color Ions to make the layouts match.
+<img src="/sprites/Chip%20Design%20Element.png" alt="Chip, the MERC mascot" width="456" height="364">
 
-## Game 2 - Oxidation
+### MiniGame 1 - Ion Deposition
+
+The wafer is etched and ready for Ion Deposition! Watch the magnifying glass show you the pattern of ions to place on the etched wafer! Complete all of the payterns to move on!
+
+### MiniGame 2 - Oxidation
+
 Watch the wafers and make sure the bake for the right amount of time to gather enough oxygen.
 
-## Game 3 - Photolithography
+### MiniGame 3 - Photolithography
+
 Find the pattern that matches the glowing shapes on the wafer to make sure the laser cuts the right pattern!
 
-## Game 4 - Etching
+### MiniGame 4 - Etching
+
 Blow or wash away the burnt edges of the wafer left by the laser, make sure its sparkly clean!
 
-## Game 5 - Die Sorting
+### MiniGame 5 - Die Sorting
+
 The die tester is scanning through all of the die, time it to make sure you stop it on the working ones!
 
-## Game 6 - Packaging
+### MiniGame 6 - Packaging
+
 Piece together the correct case and mount for each die as it rolls of the conveyor and send it away to the customer!
 
-# Possible Other Games or Features
+## How To Play
+
+- Clone the repo
+- Choose a .exe file (for windows) or use the .sh (for Linux) from the Versions Folder
+- Enjoy!
+
+## Possible Other Games or Features
+
 - Hub Area
 - Customer orders to fill out
 - Silicon Wafer Cutting
-- Silicon Ingot Forge 
+- Silicon Ingot Forge
+
+![MERC Banner](sprites/Boise-State-MERC_Sponsorship_Graphic_RGB.png)

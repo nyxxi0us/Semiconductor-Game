@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://e42ajim0nvfs"]
+
+[node name="MarginContainer" type="MarginContainer" unique_id=531762410]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1846578442]
+layout_mode = 2
+color = Color(1, 0.45882353, 0.11764706, 0.3254902)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=1715681313]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=1512631687]
+layout_mode = 2
+alignment = 1

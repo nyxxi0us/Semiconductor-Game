@@ -63,3 +63,7 @@ text = "Fullscreen Toggle"
 
 [node name="FullscreenCheckbox" type="CheckBox" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=1464649405]
 layout_mode = 2
+
+[connection signal="drag_ended" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/MusicVolumeSlider" to="." method="_on_music_volume_slider_drag_ended"]
+[connection signal="drag_ended" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/SFXVolumeSlider" to="." method="_on_sfx_volume_slider_drag_ended"]
+[connection signal="toggled" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/FullscreenCheckbox" to="." method="_on_fullscreen_checkbox_toggled"]
